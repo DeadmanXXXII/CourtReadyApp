@@ -37,3 +37,58 @@
     }
   ],
   "id": "Court ready prototype."
+
+
+
+
+{
+  "name": "CourtPath UK",
+  "short_name": "CourtPath UK",
+  "description": "CourtPath UK — a prototype to a bigger build court ready which will include N.I. papers, a full set of human, civil, parental and children's rights and confirmed formatting. Print and print view edit work in combination.",
+  "id": "/courtpath.uk",
+  "lang": "en-GB",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#ffffff",
+  "background_color": "#cfcd64",
+
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "screenshots/home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Home screen"
+    }
+  ],
+
+  "categories": ["productivity", "legal", "documentation"],
+
+  "shortcuts": [
+    {
+      "name": "New Court Form",
+      "short_name": "New Form",
+      "url": "./new-form"
+    },
+    {
+      "name": "Print View",
+      "short_name": "Print",
+      "url": "./print"
+    }
+  ]
+}
