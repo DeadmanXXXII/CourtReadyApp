@@ -1,6 +1,6 @@
-# [Project name]
+# CourtPath UK
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+CourtPath UK helps people organise facts, dates, questions, and supporting documents for UK civil and family court procedures, especially matters involving children.
 
 ## Run & Operate
 
@@ -22,23 +22,30 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/courtpath-uk/` — the deployable React app and its guided drafting flows.
+- `attached_assets/` — the user-supplied court forms, rights guide, and fictional worked examples used as reference material.
+- `artifacts/api-server/` — shared API scaffold; CourtPath's first release intentionally does not send case data to a server.
+- `artifacts/courtpath-uk/src/App.tsx` — template library, draft state, document preview, print, and download behavior.
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The first release is browser-only: drafts are saved in local storage and exports happen locally.
+- The app creates editable working drafts, not official court forms or legal advice.
+- Reference content is jurisdiction-aware and labels fictional worked examples as examples.
+- The initial scope covers Scotland, England & Wales orientation, and an ECHR readiness checklist; Northern Ireland is not yet included.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Users can choose a procedure, answer guided plain-English prompts, review a live draft, track missing details and attachments, and print or download a text/HTML draft. The rights guide and document library explain the purpose and limits of each supplied reference.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Keep legal-safety language prominent and avoid claiming a generated draft is guaranteed to be correct or accepted.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Court forms and rules change; users must check the current official version before lodging anything.
+- Do not treat the fictional names, dates, addresses, or authorities in the worked examples as user data.
 
 ## Pointers
 

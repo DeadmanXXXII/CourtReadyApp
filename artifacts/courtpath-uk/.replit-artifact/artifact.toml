@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "CourtPath UK"
+description = "A guided document-preparation app for people navigating UK civil and family court procedures, with jurisdiction-aware workflows, plain-English prompts, editable drafts, and printable submission packs based on the provided reference materials."
+version = "1.0.0"
+id = "artifacts/courtpath-uk"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24407
+
+[services.development]
+run = "pnpm --filter @workspace/courtpath-uk run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/courtpath-uk", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/courtpath-uk/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24407"
+BASE_PATH = "/"
